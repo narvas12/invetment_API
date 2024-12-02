@@ -1,0 +1,32 @@
+<!-- email_templates/message.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Message</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body style="font-family: Arial, sans-serif; background-color: #f4f4f4; margin: 0; padding: 0;">
+    <div style="background-color: #ffffff; width: 100%; max-width: 600px; margin: 0 auto; padding: 20px; border-radius: 10px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
+        <div style="text-align: center; margin-bottom: 20px; display: flex; justify-content: space-between; background-color: #Ffd700; border-radius: 10px; padding: 1rem; align-items: center;">
+            <img src="https://tinypic.host/images/2024/12/01/logo-no-bg.png" alt="Logo" style="max-width: 100px; height: auto;">
+            <h2 style="color: #ffffff; margin-left: 10px; font-weight: 900;">GoldEagleCredit</h2>
+        </div>
+        <div style="color: #000000; padding: 10px; text-align: center;">
+            <h1 style="margin: 0; font-family: 'Pacifico', cursive; color: #Ffd700;">New Message</h1>
+        </div>
+        <hr style="background-color: #Ffd700; border: 0; border-top: 4px solid #Ffd700; width: 80%; margin: 20px auto;">
+        <div style="padding: 20px; text-align: left;">
+            <p><strong>Name:</strong> {{ name }}</p>
+            <p><strong>Email:</strong> {{ email }}</p>
+            <p><strong>Message:</strong></p>
+            <p>{{ message }}</p>
+        </div>
+        <hr style="background-color: #Ffd700; border: 0; border-top: 4px solid #Ffd700; width: 80%; margin: 20px auto;">
+        <div style="font-size: 12px; text-align: center; padding: 20px; background-color: #Ffd700; color: #ffffff; border-radius: 10px;">
+            <p style="margin: 0;">© 2024 GoldEagleCredit Investment Company. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>

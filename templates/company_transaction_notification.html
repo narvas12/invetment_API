@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New {{ transaction_type }} Initiated</title>
+</head>
+<body style="font-family: Arial, sans-serif; background-color: #f4f4f4; padding: 20px;">
+    <div style="max-width: 600px; margin: 0 auto; background-color: #ffffff; border-radius: 10px; padding: 20px;">
+        <h2 style="color: #Ffd700;">New {{ transaction_type }} Initiated by {{ user.first_name }} {{ user.last_name }}</h2>
+        <p style="color: #333333;">A {{ transaction_type }} transaction has been initiated.</p>
+
+        <p style="color: #333333;">Transaction Details:</p>
+        <ul style="list-style: none; padding: 0; color: #333333;">
+            <li><strong>User:</strong> {{ user.get_full_name }}</li>
+            <li><strong>Transaction Type:</strong> {{ transaction_type }}</li>
+            <li><strong>Amount:</strong> ${{ amount }}</li>
+            {% if transaction_type == 'withdrawal' %}
+                <li><strong>Withdrawal Account:</strong> {{ withdrawal_account.name }} - {{ withdrawal_account.account }} ({{ withdrawal_account.network }})</li>
+            {% endif %}
+            <li><strong>Date:</strong> {{ transaction.date|date:"F j, Y, g:i a" }}</li>
+        </ul>
+
+        <p style="color: #333333;">Please verify and process the transaction.</p>
+
+        <hr style="border-top: 1px solid #ccc; margin: 20px 0;">
+        
+        <p style="font-size: 12px; color: #a0a0a0;">This is an automated notification. Do not reply to this email.</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<body style="font-family: Arial, sans-serif; background-color: #f4f4f4; padding: 20px; text-align: center;">
+    <div style="max-width: 600px; margin: 0 auto; background-color: #ffffff; border-radius: 10px; padding: 20px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); text-align: center;">
+        <div style="text-align: center; margin-bottom: 20px; display: flex; justify-content: center; align-items: center; background-color: #Ffd700; border-radius: 10px;">
+            <img src="https://tinypic.host/images/2024/12/01/logo-no-bg.png" alt="Logo" style="max-width: 100px; height: auto;">
+            <h2 style="color: #ffffff; margin-left: 15px;">GoldEagleCredit</h2>
+        </div>
+
+        <h2 style="color: #Ffd700;">{{ user.first_name }} {{ user.last_name }}</h2>
+        
+        <p style="color: #333333;">
+            Your deposit of <strong>${{ amount }}</strong> has been <strong>{{ status }}</strong>.
+        </p>
+
+        <p style="color: #333333;">Transaction Details:</p>
+        <ul style="list-style: none; padding: 0; color: #333333;">
+            <li><strong>Transaction Type:</strong> Deposit</li>
+            <li><strong>Amount:</strong> ${{ amount }}</li>
+            <li><strong>Status:</strong> {{ status }}</li> <!-- Display the updated status here -->
+        </ul>
+
+        {% if status == 'approved' %}
+        <p style="color: #333333;">Congratulations! Your deposit has been approved, and your account has been credited with the specified amount.</p>
+        {% else %}
+        <p style="color: #333333;">Unfortunately, your deposit has been rejected. Please contact support for more details.</p>
+        {% endif %}
+
+        <p style="color: #333333;">Thank you for using our service!</p>
+
+        <hr style="border-top: 1px solid #ccc; margin: 20px 0;">
+
+        <div style="color: #a0a0a0; font-size: 12px;">
+            <p>This email is generated automatically. Please do not reply.</p>
+            <p>Copyright © 2024 GoldEagleCredit. All rights reserved.</p>
+            <p>For inquiries, please contact us at:</p>
+            <p>Email: info@GoldEagleCredit.com</p>
+        </div>
+    </div>
+</body>

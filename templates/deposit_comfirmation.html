@@ -1,0 +1,16 @@
+<body style="font-family: Arial, sans-serif; background-color: #f4f4f4; padding: 20px;">
+    <div style="max-width: 600px; margin: 0 auto; background-color: #ffffff; border-radius: 10px; padding: 20px;">
+        <h2 style="color: #Ffd700;">New Deposit Confirmation Request</h2>
+
+        <p style="color: #333333;">Deposit Details:</p>
+        <ul style="list-style: none; padding: 0; color: #333333;">
+            <li><strong>User:</strong> {{ user.get_full_name }}</li>
+            <li><strong>Wallet Credited:</strong> ${{ wallet_credited }}</li>
+            <li><strong>Transaction Hash:</strong> {{ deposit.transaction_hash }}</li>
+        </ul>
+
+        <hr style="border-top: 1px solid #ccc; margin: 20px 0;">
+        
+        <p style="font-size: 12px; color: #a0a0a0;">This is an automated notification. Do not reply to this email.</p>
+    </div>
+</body>
